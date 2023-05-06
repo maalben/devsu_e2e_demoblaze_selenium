@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Challenge Devsu</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="4c8d96cc31c359251dba8d3e93cd8027b1218681cab291de3430b92401ae4d1b.html">Buy Products Test</a></span>
+                > <span class="truncate-60"><a
+                    href="114ef3c6d086f87d8a36bcc719e2591fd4453a38687f524d05185b2d60048a7b.html">Purchase products in the system </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 05-05-2023 16:12</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Buy Products Test </span>
+                                    <span class="badge tag-badge" style="">Story</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                As a customer I want to be able to purchase products.<br />
+I want to validate that the purchase flow is correct.
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="de771840b63a8b14cceb909edefb209c99696087ed43e4fcb631ed5933489169.html">Test Full
+                                    (tag)</a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="fa fa-tag"></i>&nbsp;<a class="tagLink" style="background:default;" href="0949fd2dda0d5f430df010390457c5a6d5f69cf4740a804ac467a569a5366362.html">{@Successflow}
+                                    (tag)</a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Purchase products in the system
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana opens the demoblaze page" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana opens the https://www.demoblaze.com/" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana opens the demoblaze page (completed)" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana select" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana select the product 'Samsung galaxy s6'" width="3456"/>
+                <img src="e4e2585246bc9050dd083a394bd927f33954c7d9b667822fd2b41525fd28f6ed.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name (completed)" width="3456"/>
+                <img src="53eff1678f177bd3b584aeb4f00ce226c84a71bcd1a8ca28203eb3dc2dc2c9d0.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="72cf078152fc00c613972797e4b6e71868579730f45fab787256d53cd0a660ed.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="72cf078152fc00c613972797e4b6e71868579730f45fab787256d53cd0a660ed.png" title=" Juana clicks on button add cart (completed)" width="3456"/>
+                <img src="72cf078152fc00c613972797e4b6e71868579730f45fab787256d53cd0a660ed.png" title=" Juana alert pass" width="3456"/>
+                <img src="72cf078152fc00c613972797e4b6e71868579730f45fab787256d53cd0a660ed.png" title=" Juana alert pass (completed)" width="3456"/>
+                <img src="72cf078152fc00c613972797e4b6e71868579730f45fab787256d53cd0a660ed.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home (completed)" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana select the product 'Samsung galaxy s6' (completed)" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana select the product 'Iphone 6 32gb'" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name (completed)" width="3456"/>
+                <img src="3da2efb3803773d97b462b3bd35a994dc204590b9c91b85de37f89cbc9f32d1e.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="7185dd6818f6e8d132969e090f53e0e11a80f39f57fb0b93c2b3d906dbec8273.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="7185dd6818f6e8d132969e090f53e0e11a80f39f57fb0b93c2b3d906dbec8273.png" title=" Juana clicks on button add cart (completed)" width="3456"/>
+                <img src="7185dd6818f6e8d132969e090f53e0e11a80f39f57fb0b93c2b3d906dbec8273.png" title=" Juana alert pass" width="3456"/>
+                <img src="7185dd6818f6e8d132969e090f53e0e11a80f39f57fb0b93c2b3d906dbec8273.png" title=" Juana alert pass (completed)" width="3456"/>
+                <img src="7185dd6818f6e8d132969e090f53e0e11a80f39f57fb0b93c2b3d906dbec8273.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home (completed)" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana select the product 'Iphone 6 32gb' (completed)" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana select the product 'Nexus 6'" width="3456"/>
+                <img src="d233a1d180f3b6d2bb3b8b136514ae77b198ce25baf9ca636e19b15e40d135c5.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name" width="3456"/>
+                <img src="2108d1e3a16510f9351f75fdd0ad0abacae8ca9466261a518ca8bb5aeefe6a16.png" title=" Juana clicks on product name (completed)" width="3456"/>
+                <img src="2b1f1684fdf6dc6e65f6641c5240b071727f32f7cb3f10ada4332a171623780e.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="0b0e42b5d15d10475339daf3d425c11d6f22f870feefe61b65aceece470c041d.png" title=" Juana clicks on button add cart" width="3456"/>
+                <img src="0b0e42b5d15d10475339daf3d425c11d6f22f870feefe61b65aceece470c041d.png" title=" Juana clicks on button add cart (completed)" width="3456"/>
+                <img src="0b0e42b5d15d10475339daf3d425c11d6f22f870feefe61b65aceece470c041d.png" title=" Juana alert pass" width="3456"/>
+                <img src="4ede2940f5d767a704668006cd51e9aa7733f97d2a683491ab70f5cd9c47f85a.png" title=" Juana alert pass (completed)" width="3456"/>
+                <img src="4ede2940f5d767a704668006cd51e9aa7733f97d2a683491ab70f5cd9c47f85a.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana clicks on link home (completed)" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana select the product 'Nexus 6' (completed)" width="3456"/>
+                <img src="e095763d6f33ecac19aa5b522633b4841f3945b8edbbf0f74adfe55b765f4da3.png" title=" Juana select (completed)" width="3456"/>
+                <img src="4c29ddb84feb504007cd8c8dc26eae962c59874f7dfc410bf58ab7d9a3c06404.png" title=" Juana click under Cart link " width="3456"/>
+                <img src="4c29ddb84feb504007cd8c8dc26eae962c59874f7dfc410bf58ab7d9a3c06404.png" title=" Juana clicks on Link cart" width="3456"/>
+                <img src="4c29ddb84feb504007cd8c8dc26eae962c59874f7dfc410bf58ab7d9a3c06404.png" title=" Juana clicks on Link cart (completed)" width="3456"/>
+                <img src="4c29ddb84feb504007cd8c8dc26eae962c59874f7dfc410bf58ab7d9a3c06404.png" title=" Juana click under Cart link  (completed)" width="3456"/>
+                <img src="0038090a77d768b7ccb8e9b677c0f5fb7e3d59489f7d4ef1128ae0a9fd9f5f50.png" title=" Then Control point for validate name products selected should be (true)" width="3456"/>
+                <img src="0038090a77d768b7ccb8e9b677c0f5fb7e3d59489f7d4ef1128ae0a9fd9f5f50.png" title=" Then Control point for validate price products selected should be (true)" width="3456"/>
+                <img src="0038090a77d768b7ccb8e9b677c0f5fb7e3d59489f7d4ef1128ae0a9fd9f5f50.png" title=" Then Control point for validate total purchase should be (true)" width="3456"/>
+                <img src="c67dc9b01db3c4d55a6f35fe381c7625c96329ee68c602a71629e2a4c5f32346.png" title=" Juana fill form purchase" width="3456"/>
+                <img src="c67dc9b01db3c4d55a6f35fe381c7625c96329ee68c602a71629e2a4c5f32346.png" title=" Juana clicks on button fill form" width="3456"/>
+                <img src="c67dc9b01db3c4d55a6f35fe381c7625c96329ee68c602a71629e2a4c5f32346.png" title=" Juana clicks on button fill form (completed)" width="3456"/>
+                <img src="c67dc9b01db3c4d55a6f35fe381c7625c96329ee68c602a71629e2a4c5f32346.png" title=" Juana clears field name" width="3456"/>
+                <img src="e885f543e900417222cdbf10007e58a7b46b47f6106ac8687c5ac9421bdae6be.png" title=" Juana clears field name (completed)" width="3456"/>
+                <img src="e885f543e900417222cdbf10007e58a7b46b47f6106ac8687c5ac9421bdae6be.png" title=" Juana enters 'Juan de Arco' into name" width="3456"/>
+                <img src="be9dd5ab85d802d5fa2a8d1a6a74432db36a8dd51b7d54ae8cc802501ce8b30a.png" title=" Juana enters 'Juan de Arco' into name" width="3456"/>
+                <img src="be9dd5ab85d802d5fa2a8d1a6a74432db36a8dd51b7d54ae8cc802501ce8b30a.png" title=" Juana enters 'Juan de Arco' into name (completed)" width="3456"/>
+                <img src="be9dd5ab85d802d5fa2a8d1a6a74432db36a8dd51b7d54ae8cc802501ce8b30a.png" title=" Juana clears field country" width="3456"/>
+                <img src="cad644c09dd29a8367ad5d72f324d87db8a8d5d487b423a8737009f5ec9419bc.png" title=" Juana clears field country (completed)" width="3456"/>
+                <img src="cad644c09dd29a8367ad5d72f324d87db8a8d5d487b423a8737009f5ec9419bc.png" title=" Juana enters 'Colombia' into country" width="3456"/>
+                <img src="584c01cef0d7c23c77e58f6db2c7b30434efb5ed91ee190406d14c692d2f7105.png" title=" Juana enters 'Colombia' into country" width="3456"/>
+                <img src="584c01cef0d7c23c77e58f6db2c7b30434efb5ed91ee190406d14c692d2f7105.png" title=" Juana enters 'Colombia' into country (completed)" width="3456"/>
+                <img src="584c01cef0d7c23c77e58f6db2c7b30434efb5ed91ee190406d14c692d2f7105.png" title=" Juana clears field city" width="3456"/>
+                <img src="024db92473fad69eb6389d65ade2224647fc5cd4ed44dffaa17115510e87b5c6.png" title=" Juana clears field city (completed)" width="3456"/>
+                <img src="024db92473fad69eb6389d65ade2224647fc5cd4ed44dffaa17115510e87b5c6.png" title=" Juana enters 'Medellin' into city" width="3456"/>
+                <img src="7201748d051d623e9e6b4144601179c8c3bae1b93cc4268ed47de5de0005355c.png" title=" Juana enters 'Medellin' into city" width="3456"/>
+                <img src="7201748d051d623e9e6b4144601179c8c3bae1b93cc4268ed47de5de0005355c.png" title=" Juana enters 'Medellin' into city (completed)" width="3456"/>
+                <img src="7201748d051d623e9e6b4144601179c8c3bae1b93cc4268ed47de5de0005355c.png" title=" Juana clears field credit card" width="3456"/>
+                <img src="6e2e37d5608e17aa2ca3a072fd180df4a1bfcc4bace9b97b7efc73b6a450db3b.png" title=" Juana clears field credit card (completed)" width="3456"/>
+                <img src="6e2e37d5608e17aa2ca3a072fd180df4a1bfcc4bace9b97b7efc73b6a450db3b.png" title=" Juana enters '4000 0000 0000 0002' into credit card" width="3456"/>
+                <img src="cabff118284475b627a86c3b18ce1919ff0c946685e08a9f5d6784e44435fc3c.png" title=" Juana enters '4000 0000 0000 0002' into credit card" width="3456"/>
+                <img src="cabff118284475b627a86c3b18ce1919ff0c946685e08a9f5d6784e44435fc3c.png" title=" Juana enters '4000 0000 0000 0002' into credit card (completed)" width="3456"/>
+                <img src="cabff118284475b627a86c3b18ce1919ff0c946685e08a9f5d6784e44435fc3c.png" title=" Juana clears field month" width="3456"/>
+                <img src="7f6929a83b8321e7c0b2619a303327269df3f2e52459ac3ad9df6ba073b88127.png" title=" Juana clears field month (completed)" width="3456"/>
+                <img src="7f6929a83b8321e7c0b2619a303327269df3f2e52459ac3ad9df6ba073b88127.png" title=" Juana enters '06' into month" width="3456"/>
+                <img src="0fb6a727b1b9dfe49d7b23b0d9462621e4ff763cdeb0d4ecf29ced93ed24e089.png" title=" Juana enters '06' into month" width="3456"/>
+                <img src="0fb6a727b1b9dfe49d7b23b0d9462621e4ff763cdeb0d4ecf29ced93ed24e089.png" title=" Juana enters '06' into month (completed)" width="3456"/>
+                <img src="0fb6a727b1b9dfe49d7b23b0d9462621e4ff763cdeb0d4ecf29ced93ed24e089.png" title=" Juana clears field year" width="3456"/>
+                <img src="f04edfb1da07e73c92dcf59115ec8de9d8d2c0a6823ee3e9a2f21ea33adf5fce.png" title=" Juana clears field year (completed)" width="3456"/>
+                <img src="f04edfb1da07e73c92dcf59115ec8de9d8d2c0a6823ee3e9a2f21ea33adf5fce.png" title=" Juana enters '27' into year" width="3456"/>
+                <img src="5f8c769ce9adb94317ff51bc203327f13d81fe37a6eacf4cb138c07925e599bd.png" title=" Juana enters '27' into year" width="3456"/>
+                <img src="5f8c769ce9adb94317ff51bc203327f13d81fe37a6eacf4cb138c07925e599bd.png" title=" Juana enters '27' into year (completed)" width="3456"/>
+                <img src="5f8c769ce9adb94317ff51bc203327f13d81fe37a6eacf4cb138c07925e599bd.png" title=" Juana clicks on button purchase" width="3456"/>
+                <img src="c6f77d41337207eac011a7e094166f86bccfe1597fa45aec49921e43586df659.png" title=" Juana clicks on button purchase" width="3456"/>
+                <img src="c6f77d41337207eac011a7e094166f86bccfe1597fa45aec49921e43586df659.png" title=" Juana clicks on button purchase (completed)" width="3456"/>
+                <img src="c6f77d41337207eac011a7e094166f86bccfe1597fa45aec49921e43586df659.png" title=" Juana fill form purchase (completed)" width="3456"/>
+                <img src="8ee6acde35f5c91a943c621f622f8df08663899a4d0774963a2856eed68326b5.png" title=" Then Validation purchase performed successfully should be (true)" width="3456"/>
+                <img src="aa9231b728382135af8e00d4a72aa6eb829a7df62a7efa929d32c9faaf35a76a.png" title=" Then Validation purchase performed successfully should be (true) (completed): <span class='success-color'>SUCCESS</span>" width="3456"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.5.10</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+defaultTasks 'clean', 'test', 'aggregate'
+group 'org.example'
+version '1.0-SNAPSHOT'
+repositories {
+    mavenLocal()
+    jcenter()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.2.8")
+        classpath "net.serenity-bdd:serenity-single-page-report:2.2.8"
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '2.5.10'
+    junitVersion = '4.13.1'
+    assertJVersion = '3.8.0'
+}
+
+dependencies {
+    testImplementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}",
+            "junit:junit:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}"
+
+}
+
+serenity {
+    reports = ["single-page-html"]
+}
+
+tasks.withType(Test) {
+    systemProperties['env'] = System.properties["env"] != null ? System.properties["env"] : "default"
+}
+
+gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
