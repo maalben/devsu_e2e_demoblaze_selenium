@@ -1,0 +1,21 @@
+Conclusiones
+
+Como página de pruebas, es entendible encontrar muchos hallazgos, por el cual, si esto estuviera en producción sería incidente para el negocio y por ende la generación de una mala publicidad para el negocio.
+
+Algunos de los hallazgos funcionales se identifica:
+
+- Se permite validar la compra sin la necesidad de colocar los datos del cliente, por el cual, pueden haber pedidos que queden sin información del cliente.
+
+- No se tiene validación de números de tarjeta.
+
+- Los campos de mes y año no especifican el formato esperado, por el cual, al tenerlos sin validación se puede añadir información incorrecta.
+
+- No se permite añadir cantidades de compra.
+
+- El precio en la página principal tiene un formato diferente al precio que se muestra en el carrito de compra.
+
+
+Lo anterior son ALGUNOS hallazgos mas relevantes, sin embargo, para algo que si fuera a producción se debe tener en cuenta contemplar los requerimiento funcionales del negocio.
+
+
+A nivel de experiencia de la prueba, puedo resaltar que se usó selenium y una pequeña, pero muy pequeña porción del patrón de automatización de Screenplay Pattern, esto se debió a que Screenplay propicia la buena práctica de codificación de pruebas ya que basa lleva a la práctica los principios SOLID de una manera representativa. Hay que tener en cuenta que selenium puro es bueno para automatizar, tal como se hizo en el reto asignado, sin embargo, es bueno añadirle otras herramientas como Serenity, Gherkin, Cucumber, entre otras.
